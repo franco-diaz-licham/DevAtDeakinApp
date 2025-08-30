@@ -236,4 +236,6 @@ export async function handleStripeWebhook(req: Request, res: e.Response<any, Rec
         },
         { merge: true }
     );
+
+    res.status(200).json(mapToResponse(200, "Completed."));
 }
